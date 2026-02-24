@@ -1,25 +1,23 @@
-import { MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { MessageCircle, ChevronDown, ChevronUp } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
-interface FlavorData {
-  taste: string;
-  value: number;
-}
 
 interface ProductCardProps {
   name: string;
   description: string;
   price: string;
   image: string;
-  tags?: string[];
-  flavorData: FlavorData[];
+  tags: string[];
+  flavorData: { taste: string; value: number }[];
   onWhatsAppOrder: () => void;
   onShowFlavorProfile: () => void;
 }
 
 export function ProductCard({ name, description, price, image, tags, flavorData, onWhatsAppOrder, onShowFlavorProfile }: ProductCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+    <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
       {/* Product Image */}
       <div 
         className="relative h-56 overflow-hidden cursor-pointer"
@@ -55,7 +53,7 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
       </div>
 
       {/* Product Info */}
-      <div className="p-6 space-y-3">
+      <div className="p-6 space-y-3 flex flex-col flex-grow">
         <h3
           className="text-2xl font-bold text-[var(--color-text-dark)]"
           style={{ fontFamily: "'Playfair Display', serif" }}
@@ -63,12 +61,14 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
           {name}
         </h3>
         
-        <p
-          className="text-sm text-gray-600 line-clamp-2 leading-relaxed"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
-        >
-          {description}
-        </p>
+        <div className="flex-grow">
+          <p
+            className={`text-sm text-gray-600 leading-relaxed ${isExpanded ? "" : "line-clamp-2"}`}
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            {description}
+          </p>
+        </div>
 
         <div className="flex items-center justify-between pt-2">
           <p
@@ -78,14 +78,26 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
             {price}
           </p>
           
-          <button
-            onClick={onWhatsAppOrder}
-            className="flex items-center gap-2 bg-[var(--color-primary-matcha)] text-white px-5 py-2.5 rounded-full hover:bg-[var(--color-primary-matcha)]/90 hover:scale-105 transition-all duration-200 shadow-md"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
-          >
-            <MessageCircle className="w-4 h-4" />
-            <span>Pesan</span>
-          </button>
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+            >
+              {isExpanded ? (
+                <ChevronUp className="w-5 h-5 text-gray-600" />
+              ) : (
+                <ChevronDown className="w-5 h-5 text-gray-600" />
+              )}
+            </button>
+            <button
+              onClick={onWhatsAppOrder}
+              className="flex items-center gap-2 bg-[var(--color-primary-matcha)] text-white px-5 py-2.5 rounded-full hover:bg-[var(--color-primary-matcha)]/90 hover:scale-105 transition-all duration-200 shadow-md"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Pesan</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
