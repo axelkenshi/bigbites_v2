@@ -113,7 +113,7 @@ const products = [
     name: "japanese haku",
     description: "Kue kering dengan matcha premium dari Jepang. Rasa unik, tekstur lembut, dan aroma teh hijau yang menenangkan.",
     price: "Rp 100.000",
-    image: "/images/fish.jpg",
+    image: "/images/fishh.jpg",
     tags: ["New"],
     category: "Kue Basah",
     flavorData: [

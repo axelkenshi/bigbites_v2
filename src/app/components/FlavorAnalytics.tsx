@@ -33,13 +33,13 @@ export function FlavorAnalytics() {
         <div className="w-10 h-10 rounded-full bg-[var(--color-primary-matcha)]/10 flex items-center justify-center">
           <Sparkles className="w-5 h-5 text-[var(--color-primary-matcha)]" />
         </div>
-        <div>
-          <h3
+      <div>
+        <h3 
             className="text-xl font-bold text-[var(--color-text-dark)]"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Analisis Rasa
-          </h3>
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          Analisis Rasa
+        </h3>
           <p className="text-xs text-gray-500" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             Profil kualitas premium
           </p>
@@ -52,7 +52,7 @@ export function FlavorAnalytics() {
           <PolarGrid stroke="#E0E0E0" />
           <PolarAngleAxis
             dataKey="taste"
-            tick={{ fill: "#2D3748", fontSize: 12, fontFamily: "'DM Sans', sans-serif" }}
+            tick={{ fill: "#2D3748", fontSize: 10, fontFamily: "'DM Sans', sans-serif" }}
           />
           <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} />
           <Radar
@@ -68,7 +68,7 @@ export function FlavorAnalytics() {
       {/* Description */}
       <div className="bg-white rounded-2xl p-4 border-l-4 border-[var(--color-primary-matcha)]">
         <p className="text-sm text-gray-700 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-          Setiap produk kami dirancang dengan <strong>keseimbangan rasa sempurna</strong>. 
+          Setiap produk kami di formulasikan dengan <strong>keseimbangan rasa sempurna</strong>. 
           Tingkat kerenyahan maksimal, aroma menggugah selera, dan tekstur yang lembut 
           menjadikan Big Bites pilihan utama untuk momen spesial Anda.
         </p>

@@ -6,10 +6,13 @@ import { FAQSection } from "./components/FAQSection";
 import { AppDockNavigation } from "./components/AppDockNavigation";
 import { Footer } from "./components/Footer";
 import { InfoModal } from "./components/InfoModal";
+import { useIsMobile } from "./components/ui/use-mobile";
+import { FlavorAnalytics } from "./components/FlavorAnalytics";
 
 export default function App() {
   const [modalType, setModalType] = useState<'about' | 'certifications' | null>(null);
   const productSectionRef = useRef<HTMLElement>(null);
+  const isMobile = useIsMobile();
 
   const scrollToProducts = () => {
     productSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -41,6 +44,13 @@ export default function App() {
 
       {/* Product Catalog Section */}
       <ProductCatalog ref={productSectionRef} />
+
+      {/* Flavor Analytics for Mobile */}
+      {isMobile && (
+        <div className="px-4 sm:px-6 lg:px-8">
+          <FlavorAnalytics />
+        </div>
+      )}
 
       {/* FAQ Section */}
       <FAQSection />
