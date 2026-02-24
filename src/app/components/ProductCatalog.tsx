@@ -63,7 +63,7 @@ const products = [
     description: "Perpaduan sempurna antara tepung sagu dan keju premium. Renyah di luar, lembut di dalam.",
     price: "Rp 80.000",
     image: "https://images.unsplash.com/photo-1609320034420-0e15d165951e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG9ydGJyZWFkJTIwY29va2llc3xlbnwxfHx8fDE3NzE5MDMyNjd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    tags: [],
+    tags: ["Best Seller", "Eid Special"],
     category: "Kue Kering",
     flavorData: [
       { taste: "Manis", value: 50 },
@@ -99,6 +99,23 @@ const products = [
     image: "https://images.unsplash.com/photo-1722969345811-653f6da3edf0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYXRjaGElMjBjb29raWVzJTIwZ3JlZW4lMjB0ZWF8ZW58MXx8fHwxNzcxOTAzMjY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["New"],
     category: "Kue Kering",
+    flavorData: [
+      { taste: "Manis", value: 75 },
+      { taste: "Gurih", value: 60 },
+      { taste: "Renyah", value: 80 },
+      { taste: "Lembut", value: 85 },
+      { taste: "Aroma", value: 100 },
+      { taste: "Buttery", value: 65 },
+    ]
+  },
+  {
+    id: 7,
+    name: "japanese cream",
+    description: "Kue kering dengan matcha premium dari Jepang. Rasa unik, tekstur lembut, dan aroma teh hijau yang menenangkan.",
+    price: "Rp 10.000",
+    image: "public/images/fish.jpg",
+    tags: ["New"],
+    category: "Kue Basah",
     flavorData: [
       { taste: "Manis", value: 75 },
       { taste: "Gurih", value: 60 },

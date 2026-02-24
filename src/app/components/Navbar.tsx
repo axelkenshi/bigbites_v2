@@ -19,7 +19,7 @@ export function Navbar({ onScrollToProducts }: NavbarProps) {
             </h1>
           </div>
 
-          {/* Contact Button */}
+          {/* Product Button */}
           <button
             onClick={onScrollToProducts}
             className="bg-[var(--color-text-dark)] text-white px-6 py-3 rounded-full hover:scale-105 transition-transform duration-200 shadow-md"
