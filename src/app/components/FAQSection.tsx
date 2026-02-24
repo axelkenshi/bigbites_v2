@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Berapa lama waktu yang dibutuhkan untuk pre-order?",
-    answer: "Untuk pre-order Lebaran, kami membutuhkan minimal 2 minggu sebelum hari H. Namun, kami sangat menyarankan untuk memesan 3-4 minggu sebelumnya agar kami dapat mempersiapkan dengan optimal dan memastikan kualitas terbaik."
+    answer: "Untuk pre-order Lebaran, kami membutuhkan minimal 5 hari sebelum hari H. Namun, kami sangat menyarankan untuk memesan 1-3 minggu sebelumnya agar kami dapat mempersiapkan dengan optimal dan memastikan kualitas terbaik."
   },
   {
     question: "Apakah produk Big Bites halal dan higienis?",
@@ -23,8 +23,12 @@ const faqs = [
     answer: "Tidak ada minimal order! Anda bisa memesan sesuai kebutuhan, mulai dari 1 toples. Namun, untuk pembelian dalam jumlah besar (lebih dari 10 toples), kami menyediakan harga spesial. Hubungi kami untuk informasi lebih lanjut."
   },
   {
-    question: "Bagaimana packaging dan pengiriman produk?",
-    answer: "Produk kami dikemas dengan sangat hati-hati dalam toples premium dan bubble wrap untuk memastikan kue tetap renyah dan tidak rusak saat pengiriman. Kami bekerja sama dengan jasa ekspedisi terpercaya dan menyediakan layanan antar area tertentu."
+    question: "Apakah produk BigBites itu mahal? dan Bagaimana bentuk kemasan menariknya?",
+    answer: "Produk kami tergolong sangat murah dipasaran dengan kualitas premium dan produksi terbaik! Apalagi dikemas dengan wadah Food Grade yang aman dan bungkus beragam jenis seperti hampers, gift box, hingga handbag."
+  },
+  {
+    question: "Bagaimana packaging dan pengiriman produk untuk daerah jauh?",
+    answer: "Produk kami dikemas dengan sangat hati-hati dalam toples premium dan bubble wrap jika pemesanan luar daerah untuk memastikan kue tetap renyah dan tidak rusak saat pengiriman. Kami bekerja sama dengan jasa ekspedisi terpercaya dan menyediakan layanan antar area tertentu."
   },
   {
     question: "Berapa lama kue kering bisa bertahan?",

@@ -138,11 +138,11 @@ export const ProductCatalog = forwardRef<HTMLElement>((props, ref) => {
   const handleWhatsAppOrder = (productName: string, productPrice: string) => {
     const message = encodeURIComponent(
       `Halo Big Bites! Saya ingin memesan:\n\n` +
-      `🍪 Produk: ${productName}\n` +
-      `💰 Harga: ${productPrice}\n\n` +
+      ` Produk: ${productName}\n` +
+      ` Harga: ${productPrice}\n\n` +
       `Mohon informasi lebih lanjut. Terima kasih!`
     );
-    window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/628156046009?text=${message}`, '_blank');
   };
 
   return (

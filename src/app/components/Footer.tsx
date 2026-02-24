@@ -22,7 +22,7 @@ export function Footer({ onOpenAbout, onOpenCertifications, onScrollToProducts }
               </h3>
             </div>
             <p className="text-gray-300 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Kue kering premium dengan bahan berkualitas tinggi dan resep turun-temurun. 
+              Kue kering premium dengan bahan berkualitas tinggi dan resep spesial! 
               Halal, higienis, dan penuh cinta.
             </p>
             <div className="flex gap-3">
