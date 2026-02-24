@@ -16,9 +16,23 @@ interface ProductCardProps {
 export function ProductCard({ name, description, price, image, tags, flavorData, onWhatsAppOrder, onShowFlavorProfile }: ProductCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  const getPriceStyle = (priceString: string) => {
+    const length = priceString.length;
+    let fontSize = "1.5rem"; // text-2xl
+    if (length > 9) {
+      fontSize = "1.25rem"; // text-xl
+    }
+    if (length > 11) {
+      fontSize = "1.125rem"; // text-lg
+    }
+    return {
+      fontFamily: "'DM Sans', sans-serif",
+      fontSize: fontSize,
+    };
+  };
+
   return (
     <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
-      {/* Product Image */}
       <div 
         className="relative h-56 overflow-hidden cursor-pointer"
         onClick={onShowFlavorProfile}
@@ -29,7 +43,6 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         
-        {/* Tags */}
         {tags && tags.length > 0 && (
           <div className="absolute top-3 left-3 flex flex-wrap gap-2">
             {tags.map((tag, index) => (
@@ -44,7 +57,6 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
           </div>
         )}
 
-        {/* Hover Overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
           <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
             Lihat Profil Rasa
@@ -52,7 +64,6 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
         </div>
       </div>
 
-      {/* Product Info */}
       <div className="p-6 space-y-3 flex flex-col flex-grow">
         <h3
           className="text-2xl font-bold text-[var(--color-text-dark)]"
@@ -70,15 +81,15 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
           </p>
         </div>
 
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex flex-wrap items-end justify-end gap-x-4 gap-y-2 pt-2">
           <p
-            className="text-2xl font-bold text-[var(--color-primary-matcha)]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
+            className="font-bold text-[var(--color-primary-matcha)] mr-auto"
+            style={getPriceStyle(price)}
           >
             {price}
           </p>
           
-          <div className="flex items-center gap-1">
+          <div className="flex items-center shrink-0">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-1.5 rounded-full hover:bg-gray-100 transition-colors"
@@ -91,7 +102,7 @@ export function ProductCard({ name, description, price, image, tags, flavorData,
             </button>
             <button
               onClick={onWhatsAppOrder}
-              className="flex items-center gap-2 bg-[var(--color-primary-matcha)] text-white px-5 py-2.5 rounded-full hover:bg-[var(--color-primary-matcha)]/90 hover:scale-105 transition-all duration-200 shadow-md"
+              className="flex items-center gap-2 bg-[var(--color-primary-matcha)] text-white px-4 py-2 rounded-full hover:bg-[var(--color-primary-matcha)]/90 hover:scale-105 transition-all duration-200 shadow-md text-sm"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               <MessageCircle className="w-4 h-4" />
