@@ -74,7 +74,7 @@ export function HeroSection() {
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-matcha)]/20 to-[var(--color-accent-gold)]/20 rounded-full blur-2xl"></div>
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1666016506087-d18da9a7315a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwY29va2llcyUyMGFzc29ydGVkfGVufDF8fHx8MTc3MTkwMzI2NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="public/images/herobar.jpg"
                 alt="Premium Assorted Cookies"
                 className="relative rounded-full object-cover w-full h-full shadow-2xl"
               />

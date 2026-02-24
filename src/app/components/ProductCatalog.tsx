@@ -110,7 +110,7 @@ const products = [
   },
   {
     id: 7,
-    name: "japanese cream",
+    name: "japanese haku",
     description: "Kue kering dengan matcha premium dari Jepang. Rasa unik, tekstur lembut, dan aroma teh hijau yang menenangkan.",
     price: "Rp 100.000",
     image: "public/images/fish.jpg",
