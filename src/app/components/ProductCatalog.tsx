@@ -10,7 +10,7 @@ const products = [
     id: 1,
     name: "Nastar Premium",
     description: "Kue nastar dengan selai nanas asli, tekstur lembut dan rasa manis yang pas. Dibuat dengan butter Wijsman premium.",
-    price: "Rp 885.000",
+    price: "Rp 8.885.000",
     image: "https://images.unsplash.com/photo-1740631599955-0ca3e75d8139?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXN0YXIlMjBwaW5lYXBwbGUlMjBjb29raWVzfGVufDF8fHx8MTc3MTkwMzI2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["Best Seller", "Eid Special"],
     category: "Kue Kering",

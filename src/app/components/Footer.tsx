@@ -1,4 +1,4 @@
-import { Cookie, Instagram, MessageCircle, ShieldCheck, FileCheck } from "lucide-react";
+import { Cookie, Instagram, MessageCircle, ShieldCheck, FileCheck, MapPin } from "lucide-react";
 
 interface FooterProps {
   onOpenAbout: () => void;
@@ -141,6 +141,17 @@ export function Footer({ onOpenAbout, onOpenCertifications, onScrollToProducts }
           </div>
         </div>
 
+        {/* Company address */}
+        <div className="flex items-start gap-4 mb-8">
+          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+            <MapPin className="w-5 h-5 text-white" />
+          </div>
+          <p className="text-gray-300 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+            Jalan Raya Santai No. 42, Kelurahan Damai, Kecamatan Sejahtera, 
+            Kota Bahagia, 12345, Indonesia
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
@@ -148,7 +159,8 @@ export function Footer({ onOpenAbout, onOpenCertifications, onScrollToProducts }
               &copy; 2026 Big Bites. Semua hak dilindungi.
             </p>
             <p style={{ fontFamily: "'DM Sans', sans-serif" }}>
-              Dibuat dengan ❤️ untuk momen spesial Anda
+              Dibuat dengan ❤️ oleh Big Bites Homemade Group. 
+              Kami siap untuk momen spesial Anda 😊✨
             </p>
           </div>
         </div>
