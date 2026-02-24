@@ -92,7 +92,7 @@ export function AppDockNavigation({ onScrollToTop, onScrollToProducts, onOpenAbo
             </button>
 
             <button
-              onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+              onClick={() => window.open('https://wa.me/628156046009', '_blank')}
               className="p-3 rounded-full bg-[var(--color-primary-matcha)] text-white hover:bg-[var(--color-primary-matcha)]/90 transition-colors"
               aria-label="WhatsApp"
             >
@@ -158,7 +158,7 @@ export function AppDockNavigation({ onScrollToTop, onScrollToProducts, onOpenAbo
             </button>
 
             <button
-              onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+              onClick={() => window.open('https://wa.me/628156046009', '_blank')}
               className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-[var(--color-primary-matcha)] text-white hover:bg-[var(--color-primary-matcha)]/90 transition-colors"
               aria-label="WhatsApp"
             >

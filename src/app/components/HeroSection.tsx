@@ -63,7 +63,7 @@ export function HeroSection() {
                   ))}
                 </div>
                 <p className="text-sm text-[var(--color-text-dark)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                  <strong>500+</strong> Pelanggan Puas
+                  <strong>110+</strong> Pelanggan Puas
                 </p>
               </div>
             </div>
