@@ -62,7 +62,7 @@ export function InfoModal({ isOpen, onClose, type }: InfoModalProps) {
                         Big Bites lahir dari kecintaan kami terhadap kuliner tradisional Indonesia, 
                         khususnya kue kering yang selalu menjadi bagian dari momen spesial keluarga. 
                         Dimulai dari dapur rumah dengan resep turun-temurun, kami berkomitmen untuk 
-                        menghadirkan kue kering premium dengan bahan berkualitas tinggi.
+                        menghadirkan kue kering premium yang terjangkau!
                       </p>
                       <p className="text-gray-700 leading-relaxed">
                         Setiap produk Big Bites dibuat dengan <strong>Butter Wijsman</strong> asli, 
@@ -98,7 +98,7 @@ export function InfoModal({ isOpen, onClose, type }: InfoModalProps) {
                         </div>
                         <h4 className="font-bold text-lg mb-2">Kepuasan Pelanggan</h4>
                         <p className="text-sm text-gray-600">
-                          500+ pelanggan puas & loyal
+                          110+ pelanggan puas & langganan
                         </p>
                       </div>
                     </div>
@@ -110,7 +110,7 @@ export function InfoModal({ isOpen, onClose, type }: InfoModalProps) {
                         Ada pertanyaan atau ingin order? Kami siap melayani Anda!
                       </p>
                       <button
-                        onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+                        onClick={() => window.open('https://wa.me/628156046009', '_blank')}
                         className="bg-white text-[var(--color-primary-matcha)] px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
                       >
                         Chat WhatsApp

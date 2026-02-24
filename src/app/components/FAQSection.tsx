@@ -87,7 +87,7 @@ export function FAQSection() {
             Masih ada pertanyaan lain?
           </p>
           <button
-            onClick={() => window.open('https://wa.me/6281234567890?text=Halo%20Big%20Bites!%20Saya%20punya%20pertanyaan...', '_blank')}
+            onClick={() => window.open('https://wa.me/628156046009?text=Halo%20Big%20Bites!%20Saya%20punya%20pertanyaan...', '_blank')}
             className="bg-[var(--color-primary-matcha)] text-white px-8 py-4 rounded-full hover:scale-105 transition-transform duration-200 shadow-lg"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >

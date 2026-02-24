@@ -23,18 +23,18 @@ export function Footer({ onOpenAbout, onOpenCertifications, onScrollToProducts }
             </div>
             <p className="text-gray-300 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               Kue kering premium dengan bahan berkualitas tinggi dan resep spesial! 
-              Halal, higienis, dan penuh cinta.
+              Halal, higienis, dan penuh perhatian.
             </p>
             <div className="flex gap-3">
               <button
-                onClick={() => window.open('https://instagram.com/bigbites', '_blank')}
+                onClick={() => window.open('https://instagram.com/bigbiteskue', '_blank')}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[var(--color-primary-matcha)] transition-colors flex items-center justify-center"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </button>
               <button
-                onClick={() => window.open('https://wa.me/6281234567890', '_blank')}
+                onClick={() => window.open('https://wa.me/628156046009', '_blank')}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[var(--color-primary-matcha)] transition-colors flex items-center justify-center"
                 aria-label="WhatsApp"
               >

@@ -40,9 +40,9 @@ export function HeroSection() {
             >
               <Wheat className="absolute bottom-4 right-4 w-32 h-32 opacity-10" />
               <p className="relative z-10 text-lg leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                Dibuat dengan <strong>Butter Wijsman</strong> asli dan resep turun-temurun. 
+                Dibuat dengan <strong>Butter Wijsman</strong> asli dan resep terbaik. 
                 Setiap gigitan menghadirkan kelezatan yang autentik dan kualitas premium 
-                yang tak tertandingi. Halal, higienis, dan dibuat dengan cinta.
+                yang tak tertandingi, jelas sepadan dengan harga. Halal, higienis, dan dibuat dengan professional.
               </p>
             </div>
 
