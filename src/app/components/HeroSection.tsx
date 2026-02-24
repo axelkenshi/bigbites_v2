@@ -74,7 +74,7 @@ export function HeroSection() {
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-matcha)]/20 to-[var(--color-accent-gold)]/20 rounded-full blur-2xl"></div>
               <ImageWithFallback
-                src="public/images/herobar.jpg"
+                src="/images/tby.jpeg"
                 alt="Premium Assorted Cookies"
                 className="relative rounded-full object-cover w-full h-full shadow-2xl"
               />
