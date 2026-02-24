@@ -15,7 +15,7 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="space-y-6">
             {/* Pre-order Badge */}
-            <div className="inline-flex items-center gap-2 bg-[var(--color-surface-cream)] px-4 py-2 rounded-full border border-[var(--color-neutral-grey)]">
+            <div className="inline-flex items-center gap-2 bg-[var(--color-surface-cream)] px-4 py-2 rounded-full border border-[var(--color-neutral-grey)] mt-[5px]">
               <span className="w-2 h-2 bg-[var(--color-primary-matcha)] rounded-full animate-pulse"></span>
               <span className="text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 Pre-order Sekarang untuk Lebaran 2026
