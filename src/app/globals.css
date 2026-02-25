@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-width: 250px;
+  --color-primary-matcha: #8A9A5B;
+  --color-accent-gold: #D4AF37;
+  --color-surface-cream: #F5F5DC;
+  --color-text-dark: #343434;
+  --color-neutral-grey: #D3D3D3;
+}
+
+body {
+  background-color: var(--color-surface-cream);
+}

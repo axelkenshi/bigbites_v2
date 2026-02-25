@@ -1,19 +1,23 @@
 import { Star, ShieldCheck, Wheat } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import ImageCarousel from "./ImageCarousel";
+import { useIsMobile } from "./ui/use-mobile";
 
 export function HeroSection() {
+  const isMobile = useIsMobile();
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative min-h-screen py-20 md:py-0 px-4 sm:px-6 lg:px-8 md:flex md:items-center overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-[var(--color-primary-matcha)]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[var(--color-accent-gold)]/10 rounded-full blur-3xl"></div>
+        <div className="hidden md:block absolute top-20 left-10 w-96 h-96 bg-[var(--color-primary-matcha)]/10 rounded-full blur-3xl"></div>
+        <div className="hidden md:block absolute bottom-20 right-10 w-80 h-80 bg-[var(--color-accent-gold)]/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 overflow-hidden">
             {/* Pre-order Badge */}
             <div className="inline-flex items-center gap-2 bg-[var(--color-surface-cream)] px-4 py-2 rounded-full border border-[var(--color-neutral-grey)] mt-[5px]">
               <span className="w-2 h-2 bg-[var(--color-primary-matcha)] rounded-full animate-pulse"></span>
@@ -33,6 +37,8 @@ export function HeroSection() {
                 <span className="absolute bottom-2 left-0 w-full h-3 bg-[var(--color-primary-matcha)]/30 -z-0"></span>
               </span>
             </h2>
+            
+            {isMobile && <ImageCarousel containerClassName="w-full mx-auto" />}
 
             {/* Description Box */}
             <div 
@@ -69,8 +75,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative">
+          {/* Right Image - Hidden on Mobile */}
+          <div className="hidden md:block relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-matcha)]/20 to-[var(--color-accent-gold)]/20 rounded-full blur-2xl"></div>
               <ImageWithFallback

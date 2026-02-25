@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
+import ImageCarousel from "./components/ImageCarousel";
 import { ProductCatalog } from "./components/ProductCatalog";
 import { FAQSection } from "./components/FAQSection";
 import { AppDockNavigation } from "./components/AppDockNavigation";
@@ -41,6 +42,9 @@ export default function App() {
 
       {/* Hero Section */}
       <HeroSection />
+
+      {/* Image Carousel (Desktop) */}
+      {!isMobile && <ImageCarousel />}
 
       {/* Product Catalog Section */}
       <ProductCatalog ref={productSectionRef} />
