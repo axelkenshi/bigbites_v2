@@ -1,12 +1,12 @@
 export const imageData = [
   {
     id: 1,
-    src: "/images/hz/cadbury2_hz.jpeg",
+    src: "/images/hz/cadbury_hz.jpeg",
     alt: "Cadbury",
   },
   {
     id: 2,
-    src: "/images/hz/cadbury_hz.jpeg",
+    src: "/images/hz/cadbury2_hz.jpeg",
     alt: "Cadbury",
   },
   {

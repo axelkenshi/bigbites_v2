@@ -12,7 +12,7 @@ export function Navbar({ onScrollToProducts }: NavbarProps) {
           {/* Brand Logo */}
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-[var(--color-primary-matcha)] flex items-center justify-center">
-              <Cookie className="w-6 h-6 text-white" />
+              <Cookie className="w-6 h-6 text-[var(--color-accent-orange)]" />
             </div>
             <h1 className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
               Big Bites
