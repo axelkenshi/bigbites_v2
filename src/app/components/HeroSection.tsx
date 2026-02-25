@@ -75,8 +75,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Image - Hidden on Mobile */}
-          <div className="hidden md:block relative">
+          {/* Right Image - NOW VISIBLE on Mobile */}
+          <div className="relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-matcha)]/20 to-[var(--color-accent-gold)]/20 rounded-full blur-2xl"></div>
               <ImageWithFallback
@@ -86,7 +86,7 @@ export function HeroSection() {
               />
               
               {/* Halal Badge */}
-              <div className="absolute bottom-10 -left-4 bg-white rounded-2xl px-4 py-3 shadow-xl border-2 border-[var(--color-accent-gold)]">
+              <div className="absolute bottom-10 left-4 bg-white rounded-2xl px-4 py-3 shadow-xl border-2 border-[var(--color-accent-gold)]">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-6 h-6 text-[var(--color-accent-gold)]" />
                   <div>
