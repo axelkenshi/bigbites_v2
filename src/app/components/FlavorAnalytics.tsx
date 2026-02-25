@@ -4,9 +4,9 @@ import { Sparkles } from "lucide-react";
 
 const flavorData = [
   { taste: "Manis", value: 85 },
-  { taste: "Gurih", value: 70 },
-  { taste: "Renyah", value: 95 },
-  { taste: "Lembut", value: 80 },
+  { taste: "Gurih", value: 75 },
+  { taste: "Renyah", value: 80 },
+  { taste: "Lembut", value: 95 },
   { taste: "Aroma", value: 90 },
 ];
 

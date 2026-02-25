@@ -3,33 +3,33 @@ import { ProductCard } from "./ProductCard";
 import { FlavorAnalytics } from "./FlavorAnalytics";
 import { FlavorProfileModal } from "./FlavorProfileModal";
 
-const categories = ["Semua", "Kue Kering", "Kue Basah", "Spesial Lebaran"];
+const categories = ["Semua", "Kue Kering", "Kue Basah", "Spesial Lebaran!"];
 
 const products = [
   {
     id: 1,
     name: "Bebas! Custom Request",
-    description: "Kamu boleh diskusikan & pilih sesukanya dari produk di catalog ataupun jenis khusus.",
+    description: "Kamu boleh diskusikan & pilih sesukanya dari produk di catalog ataupun minta dibuatkan jenis khusus, Bahkan request menu baru yang kamu inginkan 🤤 Serta kostumisasi paket bundling sesuai selera!",
     price: "Fleksibel!",
-    image: "https://images.unsplash.com/photo-1740631599955-0ca3e75d8139?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXN0YXIlMjBwaW5lYXBwbGUlMjBjb29raWVzfGVufDF8fHx8MTc3MTkwMzI2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "/images/product_custom.jpeg",
     tags: ["Best Seller", "Eid Special"],
     category: "Kue Kering",
     flavorData: [
       { taste: "Manis", value: 90 },
-      { taste: "Gurih", value: 40 },
-      { taste: "Renyah", value: 85 },
-      { taste: "Lembut", value: 80 },
-      { taste: "Aroma", value: 85 },
-      { taste: "Buttery", value: 75 },
+      { taste: "Gurih", value: 90 },
+      { taste: "Renyah", value: 90 },
+      { taste: "Lembut", value: 90 },
+      { taste: "Aroma", value: 90 },
+      { taste: "Buttery", value: 90 },
     ]
   },
   {
     id: 2,
-    name: "Kastengel Keju",
+    name: "London Almond",
     description: "Kue kering renyah dengan taburan keju Edam asli. Gurih, premium, dan selalu jadi favorit.",
-    price: "Rp 955.000",
-    image: "/images/vr/kastengel_vr.jpeg",
-    tags: ["Best Seller"],
+    price: "Rp 80.000",
+    image: "/images/vr/londonmix_vr.jpeg",
+    tags: ["Best Seller", "Eid Special"],
     category: "Kue Kering",
     flavorData: [
       { taste: "Manis", value: 30 },
@@ -133,7 +133,7 @@ export const ProductCatalog = forwardRef<HTMLElement>((props, ref) => {
 
   const filteredProducts = activeCategory === "Semua" 
     ? products 
-    : products.filter(p => p.category === activeCategory || (activeCategory === "Spesial Lebaran" && p.tags.includes("Eid Special")));
+    : products.filter(p => p.category === activeCategory || (activeCategory === "Spesial Lebaran!" && p.tags.includes("Eid Special")));
 
   const handleWhatsAppOrder = (productName: string, productPrice: string) => {
     const message = encodeURIComponent(

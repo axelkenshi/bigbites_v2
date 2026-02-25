@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     question: "Berapa lama kue kering bisa bertahan?",
-    answer: "Dengan penyimpanan yang tepat (dalam toples tertutup rapat di suhu ruangan), kue kering kami bisa bertahan hingga 3-4 minggu sambil tetap mempertahankan kerenyahan dan rasa premium. Hindari paparan langsung sinar matahari dan kelembaban."
+    answer: "Dengan penyimpanan yang tepat (dalam toples tertutup rapat di suhu ruangan), kue kering kami bisa bertahan hingga 2-3 bulan jika disimpan dengan benar sambil tetap mempertahankan kerenyahan dan rasa premium. Hindari paparan langsung sinar matahari dan kelembaban terbuka."
   }
 ];
 
