@@ -3,6 +3,14 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ImageCarousel from "./ImageCarousel";
 import { useIsMobile } from "./ui/use-mobile";
 
+const testimonials = [
+  { id: 1, imageUrl: 'https://images.unsplash.com/photo-1598065472710-279347f95d43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFyaXN0b3RsZXxlbnwwfHwwfHx8MA%3D%3D' },
+  { id: 2, imageUrl: 'https://plus.unsplash.com/premium_photo-1683147641019-cf68bade1eb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGdlcm1hbiUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D' },
+  { id: 3, imageUrl: 'https://images.unsplash.com/photo-1475823678248-624fc6f85785?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8amFwYW5lc2UlMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D' },
+  { id: 4, imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D' },
+  { id: 5, imageUrl: 'https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2JhbWF8ZW58MHx8MHx8fDA%3D' },
+];
+
 export function HeroSection() {
   const isMobile = useIsMobile();
 
@@ -55,10 +63,11 @@ export function HeroSection() {
             {/* Social Proof */}
             <div className="flex items-center gap-4 bg-white rounded-2xl p-4 shadow-sm">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
+                {testimonials.map((testimonial) => (
                   <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--color-primary-matcha)] to-[var(--color-accent-gold)] border-2 border-white"
+                    key={testimonial.id}
+                    className="w-10 h-10 rounded-full border-2 border-white bg-cover bg-center"
+                    style={{ backgroundImage: `url(${testimonial.imageUrl})` }}
                   />
                 ))}
               </div>
