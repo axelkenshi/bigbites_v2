@@ -8,9 +8,9 @@ const categories = ["Semua", "Kue Kering", "Kue Basah", "Spesial Lebaran"];
 const products = [
   {
     id: 1,
-    name: "Nastar Premium",
-    description: "Kue nastar dengan selai nanas asli, tekstur lembut dan rasa manis yang pas. Dibuat dengan butter Wijsman premium.",
-    price: "Rp 8.885.000",
+    name: "Bebas! Custom Request",
+    description: "Kamu boleh diskusikan & pilih sesukanya dari produk di catalog ataupun jenis khusus.",
+    price: "Fleksibel!",
     image: "https://images.unsplash.com/photo-1740631599955-0ca3e75d8139?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXN0YXIlMjBwaW5lYXBwbGUlMjBjb29raWVzfGVufDF8fHx8MTc3MTkwMzI2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     tags: ["Best Seller", "Eid Special"],
     category: "Kue Kering",
@@ -28,7 +28,7 @@ const products = [
     name: "Kastengel Keju",
     description: "Kue kering renyah dengan taburan keju Edam asli. Gurih, premium, dan selalu jadi favorit.",
     price: "Rp 955.000",
-    image: "https://images.unsplash.com/photo-1646129474357-e2f4136d765f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXR0ZXIlMjBjb29raWVzJTIwZ29sZGVufGVufDF8fHx8MTc3MTkwMzI2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    image: "/images/vr/kastengel_vr.jpeg",
     tags: ["Best Seller"],
     category: "Kue Kering",
     flavorData: [

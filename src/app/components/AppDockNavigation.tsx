@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Home, Menu, Info, Instagram, MessageCircle } from "lucide-react";
+import { Home, Cookie, Cake, Info, Instagram, MessageCircle } from "lucide-react";
 
 interface AppDockNavigationProps {
   onScrollToTop: () => void;
@@ -70,7 +70,7 @@ export function AppDockNavigation({ onScrollToTop, onScrollToProducts, onOpenAbo
               className="p-3 rounded-full hover:bg-[var(--color-primary-matcha)]/10 transition-colors"
               aria-label="Products"
             >
-              <Menu className="w-5 h-5 text-[var(--color-text-dark)]" />
+              <Cookie className="w-5 h-5 text-[var(--color-text-dark)]" />
             </button>
 
             <button
@@ -127,7 +127,7 @@ export function AppDockNavigation({ onScrollToTop, onScrollToProducts, onOpenAbo
               className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-[var(--color-primary-matcha)]/10 transition-colors"
               aria-label="Products"
             >
-              <Menu className="w-5 h-5 text-[var(--color-text-dark)]" />
+              <Cookie className="w-5 h-5 text-[var(--color-text-dark)]" />
               <span className="text-sm font-medium" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 Produk
               </span>
