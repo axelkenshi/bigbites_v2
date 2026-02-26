@@ -2,42 +2,31 @@ import { Star, ShieldCheck, Wheat } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import ImageCarousel from "./ImageCarousel";
 import { useIsMobile } from "./ui/use-mobile";
-
-const testimonials = [
-  { id: 1, imageUrl: 'https://images.unsplash.com/photo-1598065472710-279347f95d43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFyaXN0b3RsZXxlbnwwfHwwfHx8MA%3D%3D' },
-  { id: 2, imageUrl: 'https://plus.unsplash.com/premium_photo-1683147641019-cf68bade1eb5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGdlcm1hbiUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D' },
-  { id: 3, imageUrl: 'https://images.unsplash.com/photo-1475823678248-624fc6f85785?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8amFwYW5lc2UlMjBwZW9wbGV8ZW58MHx8MHx8fDA%3D' },
-  { id: 4, imageUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D' },
-  { id: 5, imageUrl: 'https://images.unsplash.com/photo-1580130379624-3a069adbffc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2JhbWF8ZW58MHx8MHx8fDA%3D' },
-];
+import { testimonials } from "./TestimonialData.tsx";
+import { TestimonialCarousel } from "./TestimonialCarousel";
 
 export function HeroSection() {
   const isMobile = useIsMobile();
 
   return (
-    <section className="relative min-h-screen py-20 md:py-0 px-4 sm:px-6 lg:px-8 md:flex md:items-center overflow-hidden">
-      {/* Background Decoration */}
+    <section className="relative min-h-screen py-20 md:py-0 px-4 sm:px-6 lg:px-8 flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="hidden md:block absolute top-20 left-10 w-96 h-96 bg-[var(--color-primary-matcha)]/10 rounded-full blur-3xl"></div>
         <div className="hidden md:block absolute bottom-20 right-10 w-80 h-80 bg-[var(--color-accent-gold)]/10 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 items-center">
-          {/* Left Content */}
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 items-center mb-12">
           <div className="space-y-6 overflow-hidden">
-            {/* Pre-order Badge */}
-            <div className="inline-flex items-center gap-2 bg-[var(--color-surface-cream)] px-4 py-2 rounded-full border border-[var(--color-neutral-grey)] mt-[5px]">
+            <div className="inline-flex items-center gap-2 bg-[var(--color-surface-cream)] px-4 py-2 rounded-full border border-[var(--color-neutral-grey)] mt-5">
               <span className="w-2 h-2 bg-[var(--color-primary-matcha)] rounded-full animate-pulse"></span>
-              <span className="text-sm" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <span className="text-sm font-sans">
                 Pre-order Sekarang untuk Lebaran 2026!
               </span>
             </div>
 
-            {/* Headline */}
             <h2 
-              className="text-5xl md:text-6xl font-bold text-[var(--color-text-dark)] leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="text-5xl md:text-6xl font-bold text-[var(--color-text-dark)] leading-tight font-serif"
             >
               Kue Kering Premium{" "}
               <span className="relative inline-block">
@@ -48,22 +37,20 @@ export function HeroSection() {
             
             {isMobile && <ImageCarousel containerClassName="w-full mx-auto" />}
 
-            {/* Description Box */}
             <div 
               className="relative bg-[var(--color-primary-matcha)] text-white rounded-3xl p-8 overflow-hidden"
             >
               <Wheat className="absolute bottom-4 right-4 w-32 h-32 opacity-10" />
-              <p className="relative z-10 text-lg leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <p className="relative z-10 text-lg leading-relaxed font-sans">
                 Dibuat dengan <strong>Butter Wijsman</strong> asli dan resep terbaik. 
                 Setiap gigitan menghadirkan kelezatan yang autentik dan kualitas premium 
                 yang tak tertandingi, jelas sepadan dengan harga. Halal, higienis, dan dibuat dengan professional.
               </p>
             </div>
 
-            {/* Social Proof */}
             <div className="flex items-center gap-4 bg-white rounded-2xl p-4 shadow-sm">
               <div className="flex -space-x-2">
-                {testimonials.map((testimonial) => (
+                {testimonials.slice(0, 5).map((testimonial) => (
                   <div
                     key={testimonial.id}
                     className="w-10 h-10 rounded-full border-2 border-white bg-cover bg-center"
@@ -73,18 +60,17 @@ export function HeroSection() {
               </div>
               <div>
                 <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
+                  {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-[var(--color-accent-gold)] text-[var(--color-accent-gold)]" />
                   ))}
                 </div>
-                <p className="text-sm text-[var(--color-text-dark)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <p className="text-sm text-[var(--color-text-dark)] font-sans">
                   <strong>110+</strong> Pelanggan Puas
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right Image - NOW VISIBLE on Mobile */}
           <div className="relative">
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-matcha)]/20 to-[var(--color-accent-gold)]/20 rounded-full blur-2xl"></div>
@@ -94,13 +80,12 @@ export function HeroSection() {
                 className="relative rounded-full object-cover w-full h-full shadow-2xl"
               />
               
-              {/* Halal Badge */}
               <div className="absolute bottom-10 left-4 bg-white rounded-2xl px-4 py-3 shadow-xl border-2 border-[var(--color-accent-gold)]">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-6 h-6 text-[var(--color-accent-gold)]" />
                   <div>
-                    <p className="text-xs text-gray-500" style={{ fontFamily: "'DM Sans', sans-serif" }}>Dijamin</p>
-                    <p className="font-bold text-[var(--color-text-dark)]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                    <p className="text-xs text-gray-500 font-sans">Dijamin</p>
+                    <p className="font-bold text-[var(--color-text-dark)] font-sans">
                       100% Halal
                     </p>
                   </div>
@@ -108,6 +93,13 @@ export function HeroSection() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-16 md:mt-24">
+            <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 font-serif">
+              Apa kata mereka?
+            </h3>
+            <TestimonialCarousel />
         </div>
       </div>
     </section>

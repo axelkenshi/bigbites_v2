@@ -9,3 +9,6 @@
 
   Run `npm run dev` to start the development server.
   
+  TODO:
+  - Buat testimoni
+  - Buat Bundling Card
