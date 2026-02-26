@@ -4,6 +4,7 @@ import ImageCarousel from "./ImageCarousel";
 import { useIsMobile } from "./ui/use-mobile";
 import { testimonials } from "./TestimonialData.tsx";
 import { TestimonialCarousel } from "./TestimonialCarousel";
+import { ProductBundle } from "./ProductBundle";
 
 export function HeroSection() {
   const isMobile = useIsMobile();
@@ -94,6 +95,8 @@ export function HeroSection() {
             </div>
           </div>
         </div>
+
+        <ProductBundle />
 
         <div className="mt-16 md:mt-24">
             <h3 className="text-3xl md:text-4xl font-bold text-center mb-8 font-serif">
