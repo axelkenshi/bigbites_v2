@@ -84,5 +84,10 @@ export const imageData = [
     src: "/images/vr/peanut_vr.jpeg",
     alt: "peanut",
   },
+  {
+    id: 17,
+    src: "/images/hz/putrisalju_hz.jpg",
+    alt: "peanut",
+  },
 
 ];

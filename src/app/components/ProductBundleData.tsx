@@ -28,7 +28,7 @@ export const bundleProducts = [
     name: 'Paket All-in-One',
     originalPrice: 480000,
     specialPrice: 450000,
-    image: '/images/bundles/bundle_C.jpeg',
+    image: 'https://images.unsplash.com/photo-1771580824774-a1910891af35?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvb2tpZSUyMHBhY2thZ2luZ3xlbnwwfHwwfHx8MA%3D%3D',
     description: 'Semua varian best-seller dalam satu paket hemat. Cocok untuk keluarga besar.',
     specifications: {
       ingredients: 'Nastar, Kastengel, Putri Salju, Sagu Keju, bahan-bahan premium lainnya.',
@@ -40,7 +40,7 @@ export const bundleProducts = [
     name: 'Paket Matcha Lover',
     originalPrice: 275000,
     specialPrice: 250000,
-    image: '/images/bundles/bundle_D.jpeg',
+    image: 'https://images.unsplash.com/photo-1722969345811-653f6da3edf0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWF0Y2hhJTIwY29va2llJTIwcGFja2FnaW5nfGVufDB8fDB8fHww',
     description: 'Bagi para pecinta matcha, nikmati kue kering premium dengan rasa matcha asli.',
     specifications: {
       ingredients: 'Tepung terigu, butter Wijsman, bubuk matcha impor, gula, telur.',
