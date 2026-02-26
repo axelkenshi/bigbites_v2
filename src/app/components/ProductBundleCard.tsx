@@ -18,8 +18,9 @@ const ProductBundleCard: React.FC<ProductBundleCardProps> = ({ bundle, onShowDet
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleWhatsAppOrder = () => {
-    const message = encodeURIComponent(`Hi, I want to order this bundling package: ${bundle.name}`);
-    window.open(`https://wa.me/628156046009?text=${message}`, '_blank');
+    const message = `Hi Big Bites! saya mau tanya terkait Paket bundling dari website resminya, yaitu:\n\nPaket: ${bundle.name}\nHarga: Rp ${bundle.specialPrice.toLocaleString('id-ID')}\nQuantity: 1 \n\nMohon informasinya lebih lanjut!`;
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/628156046009?text=${encodedMessage}`, '_blank');
   };
 
   return (

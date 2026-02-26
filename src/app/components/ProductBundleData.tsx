@@ -4,7 +4,7 @@ export const bundleProducts = [
     name: 'Paket Lebaran A',
     originalPrice: 250000,
     specialPrice: 225000,
-    image: '/images/logo.jpeg',
+    image: '/images/product_custom.jpeg',
     description: 'Kombinasi klasik Nastar dan Kastengel yang selalu dinanti di hari raya.',
     specifications: {
       ingredients: 'Tepung terigu, butter Wijsman, telur, gula, keju Edam, selai nanas homemade.',
