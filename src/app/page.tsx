@@ -1,4 +1,3 @@
-
 import { HeroSection } from "./components/HeroSection";
 import { BentoGridDemo } from "./components/BentoGridDemo";
 import { GridBackgroundDemo } from "./components/GridBackgroundDemo";

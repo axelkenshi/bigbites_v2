@@ -7,11 +7,12 @@ import { FAQSection } from "./components/FAQSection";
 import { AppDockNavigation } from "./components/AppDockNavigation";
 import { Footer } from "./components/Footer";
 import { InfoModal } from "./components/InfoModal";
+import { HowToOrderModal } from "./components/HowToOrderModal";
 import { useIsMobile } from "./components/ui/use-mobile";
 import { FlavorAnalytics } from "./components/FlavorAnalytics";
 
 export default function App() {
-  const [modalType, setModalType] = useState<'about' | 'certifications' | null>(null);
+  const [modalType, setModalType] = useState<'about' | 'certifications' | 'how-to-order' | null>(null);
   const productSectionRef = useRef<HTMLElement>(null);
   const isMobile = useIsMobile();
 
@@ -29,6 +30,10 @@ export default function App() {
 
   const openCertificationsModal = () => {
     setModalType('certifications');
+  };
+
+  const openHowToOrderModal = () => {
+    setModalType('how-to-order');
   };
 
   const closeModal = () => {
@@ -63,6 +68,7 @@ export default function App() {
       <Footer
         onOpenAbout={openAboutModal}
         onOpenCertifications={openCertificationsModal}
+        onOpenHowToOrder={openHowToOrderModal}
         onScrollToProducts={scrollToProducts}
       />
 
@@ -73,11 +79,15 @@ export default function App() {
         onOpenAbout={openAboutModal}
       />
 
-      {/* Info Modal */}
+      {/* Info & How-to-Order Modals */}
       <InfoModal
-        isOpen={modalType !== null}
+        isOpen={modalType === 'about' || modalType === 'certifications'}
         onClose={closeModal}
         type={modalType || 'about'}
+      />
+      <HowToOrderModal
+        isOpen={modalType === 'how-to-order'}
+        onClose={closeModal}
       />
     </div>
   );

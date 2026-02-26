@@ -2,11 +2,12 @@ import { Cookie, Instagram, MessageCircle, ShieldCheck, FileCheck, MapPin } from
 
 interface FooterProps {
   onOpenAbout: () => void;
+  onOpenHowToOrder: () => void; // Add this line
   onOpenCertifications: () => void;
   onScrollToProducts: () => void;
 }
 
-export function Footer({ onOpenAbout, onOpenCertifications, onScrollToProducts }: FooterProps) {
+export function Footer({ onOpenAbout, onOpenHowToOrder, onOpenCertifications, onScrollToProducts }: FooterProps) {
   return (
     <footer id="footer" className="bg-[var(--color-text-dark)] text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -59,7 +60,7 @@ export function Footer({ onOpenAbout, onOpenCertifications, onScrollToProducts }
               </li>
               <li>
                 <button
-                  onClick={onScrollToProducts}
+                  onClick={onOpenHowToOrder} // Change this line
                   className="text-gray-300 hover:text-[var(--color-primary-matcha)] transition-colors"
                 >
                   Cara Pemesanan
