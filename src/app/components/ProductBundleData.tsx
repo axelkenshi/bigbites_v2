@@ -16,7 +16,7 @@ export const bundleProducts = [
     name: 'Paket Lebaran B',
     originalPrice: 260000,
     specialPrice: 235000,
-    image: '/images/bundles/bundle_B.jpeg',
+    image: 'https://media.istockphoto.com/id/1466136361/id/foto/kue-terkenal-untuk-merayakan-ied-mubarak.webp?a=1&b=1&s=612x612&w=0&k=20&c=vRrpYZO-SNq7t8ZuKnbyRyqtZZKSczbQ3Dxh0YlsqtY=',
     description: 'Putri Salju yang lembut dan Sagu Keju yang renyah dalam satu paket.',
     specifications: {
       ingredients: 'Tepung terigu, butter Wijsman, telur, gula halus, keju, sagu.',

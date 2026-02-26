@@ -148,7 +148,7 @@ export function Footer({ onOpenAbout, onOpenHowToOrder, onOpenCertifications, on
             <MapPin className="w-5 h-5 text-white" />
           </div>
           <p className="text-gray-300 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-            Jl. Teropong bintang - Bmkg lembang bosscha, Kecamatan lembang, 
+            Jl. Teropong bintang - Bmkg lembang bosscha - Perum no.15, Desa & Kecamatan lembang, 
             Kabupaten Bandung Barat, 40391, Jawa barat, Indonesia.
           </p>
         </div>
