@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "Berapa lama waktu yang dibutuhkan untuk pre-order?",
-    answer: "Untuk pre-order Lebaran, kami membutuhkan minimal 6 hari sebelum hari H. Namun, kami sangat menyarankan untuk memesan 1-3 minggu sebelumnya agar kami dapat mempersiapkan dengan optimal dan memastikan kualitas terbaik."
+    answer: "Untuk pre-order Lebaran, kami membutuhkan minimal 7 hari sebelum hari H. Namun, kami sangat menyarankan untuk memesan 1-3 minggu sebelumnya agar kami dapat mempersiapkan produksi dengan optimal, ketersediaan stok dan memastikan kualitas terbaik."
   },
   {
     question: "Apakah produk Big Bites halal dan higienis?",

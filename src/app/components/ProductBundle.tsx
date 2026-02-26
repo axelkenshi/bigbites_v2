@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { bundleProducts } from "./ProductBundleData";
 import ProductBundleCard from "./ProductBundleCard";
 import { ProductBundleModal } from "./ProductBundleModal";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
+import { useIsMobile } from "./ui/use-mobile";
 
 export function ProductBundle() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedBundle, setSelectedBundle] = useState(null);
+  const isMobile = useIsMobile();
 
-  const handleShowDetails = (bundle) => {
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
+  const handleShowDetails = (bundle: any) => {
     setSelectedBundle(bundle);
     setIsModalOpen(true);
   };
@@ -24,15 +38,26 @@ export function ProductBundle() {
           <h2 className="text-3xl font-bold font-serif text-gray-800">Paket Bundling</h2>
           <p className="mt-2 text-lg text-gray-600">Pilihan terbaik untuk berbagai momen spesial Anda.</p>
         </div>
-        <div className="relative">
-          <div className="flex overflow-x-auto space-x-6 pb-4">
+        <Carousel
+          plugins={[plugin.current]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
             {bundleProducts.map((bundle) => (
-              <div key={bundle.id} className="w-80 flex-shrink-0">
-                <ProductBundleCard bundle={bundle} onShowDetails={() => handleShowDetails(bundle)} />
-              </div>
+              <CarouselItem key={bundle.id} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <ProductBundleCard bundle={bundle} onShowDetails={() => handleShowDetails(bundle)} />
+                </div>
+              </CarouselItem>
             ))}
-          </div>
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className={isMobile ? "left-[-10px]" : ""} />
+          <CarouselNext className={isMobile ? "right-[-10px]" : ""} />
+        </Carousel>
       </div>
       <ProductBundleModal isOpen={isModalOpen} onClose={handleCloseModal} bundle={selectedBundle} />
     </section>
